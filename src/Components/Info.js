@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 
 import React, { useEffect, useState } from "react";
 import Coin from "./Coin";
@@ -11,12 +11,12 @@ const Info = () => {
     setCoins(JSON.parse(data).coins);
   }, []);
   return (
-    <Stack p={2} width="100%">
+    <Grid item sm={12} mt={5} width="100%">
       <Typography sx={{ typography: { xs: "h6" } }} color="secondary" mb={2}>
         Top 10 Cryptos In The World
       </Typography>
       <Coin coins={topCoins} />
-    </Stack>
+    </Grid>
   );
 };
 

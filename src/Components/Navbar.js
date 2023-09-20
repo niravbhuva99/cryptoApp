@@ -24,8 +24,13 @@ const links = [
 ];
 const Navbar = () => {
   return (
-    <Grid container>
-      <Grid item sm={3} xs={12} sx={{ position: "fixed", top: 0, left: 0 }}>
+    <Grid container sx={{ flexWrap: "wrap", display: "Flex" }}>
+      <Grid
+        item
+        lg={3}
+        xs={4}
+        sx={{ position: "fixed", width: "100%", top: 0, left: 0 }}
+      >
         <Box
           sx={{
             bgcolor: "info.main",
@@ -69,6 +74,7 @@ const Navbar = () => {
           </List>
         </Box>
       </Grid>
+
       <Outlet />
     </Grid>
   );

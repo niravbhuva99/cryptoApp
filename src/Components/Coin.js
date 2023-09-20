@@ -16,15 +16,13 @@ const Coin = ({ coins }) => {
   return (
     <Grid
       item
-      sm={9}
+      sm={12}
       sx={{
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
         width: "100%",
-        position: "absolute",
-        left: 170,
-        // gap:{}
+
         justifyContent: "space-around",
       }}
     >
