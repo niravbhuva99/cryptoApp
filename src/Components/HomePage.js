@@ -4,11 +4,13 @@ import { Grid } from "@mui/material";
 import FirstPage from "./FirstPage";
 const HomePage = () => {
   return (
-    <Grid container>
-      <Grid item sm={3} xs={12}>
-        <Navbar />
-      </Grid>
-      <Grid item sm={9} sx={{ overflowY: "scroll" }}>
+    <Grid sx={{ position: "relative" }}>
+      <Grid
+        item
+        sm={9}
+        xs={12}
+        sx={{ position: "absolute", top: 0, left: 190 }}
+      >
         <FirstPage />
       </Grid>
     </Grid>
