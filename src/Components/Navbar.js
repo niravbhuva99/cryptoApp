@@ -17,17 +17,17 @@ import classes from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 const links = [
-  { text: "Home", icon: <HomeIcon /> },
-  { text: "cryptocurrencies", icon: <MovingIcon /> },
-  { text: "Exchanges", icon: <CurrencyExchangeIcon /> },
-  { text: "News", icon: <NewspaperIcon /> },
+  { text: "Home", icon: <HomeIcon />, link: "/" },
+  { text: "cryptocurrencies", icon: <MovingIcon />, link: "/cryptocurrencies" },
+  { text: "Exchanges", icon: <CurrencyExchangeIcon />, link: "/Exchanges" },
+  { text: "News", icon: <NewspaperIcon />, link: "/news" },
 ];
 const Navbar = () => {
   return (
     <Grid container sx={{ flexWrap: "wrap", display: "Flex" }}>
       <Grid
         item
-        lg={3}
+        md={2}
         xs={4}
         sx={{ position: "fixed", width: "100%", top: 0, left: 0 }}
       >
@@ -65,7 +65,7 @@ const Navbar = () => {
           <List sx={{ marginRight: 1 }}>
             {links.map((link, index) => (
               <ListItem key={link.text} disablePadding>
-                <Link className={classes.link} to="/cryptocurrencies">
+                <Link className={classes.link} to={link.link}>
                   {link.icon}
                   {link.text}
                 </Link>
